@@ -12,7 +12,6 @@ install:
 
 build_script:
   - ./gradlew test -Dselenide.headless=true --info
-after_build_script:
   - ./gradlew allureReport -Dselenide.headless=true --info
 artifacts:
   paths:
