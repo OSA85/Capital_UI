@@ -5,14 +5,13 @@ import org.openqa.selenium.Keys;
 
 import java.time.Duration;
 
-import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverConditions.url;
 import static com.codeborne.selenide.WebDriverConditions.urlContaining;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CapitalTestMainPage extends BaseTest{
+public class CapitalMainPageTest extends BaseTest{
     private final String email = "ob1din.ser@yandex.ru";
     private final String password = "Qwerty123!";
     LangPage langPage = new LangPage();
