@@ -1,4 +1,5 @@
-image: Ubuntu
+#image: Ubuntu
+image: gradle:alpine
 
 stack: jdk 11
 
