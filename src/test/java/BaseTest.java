@@ -22,7 +22,7 @@ abstract class BaseTest {
         Configuration.pageLoadTimeout = 45000;
         MainPage mainPage = new MainPage(BASE_URL);
 
-        mainPage.openLangPage().choseLanguage(langPage.getLangEn());
+        mainPage.openLangPage().choseLanguage(langPage.getEnglish());
         MenuLicense menuLicense = new MenuLicense();
         menuLicense.choseLicense(menuLicense.getLicenseFSA());
         return new MainPage();

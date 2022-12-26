@@ -9,8 +9,7 @@ import static com.codeborne.selenide.Selenide.$x;
 @Data
 public class LangPage {
 
-    private final SelenideElement langEn = $x("//a [@href='https://capital.com/']");
-    private final SelenideElement english = $x("//i[@class='cc-flags cc-flags--gb']//..");
+    private final SelenideElement english = $x("//i[@class='cc-flags cc-flags--gb']/..");
     private final SelenideElement arab = $x("//i[@class='cc-flags cc-flags--ab']/..");
     private final SelenideElement id = $x("//i[@class='cc-flags cc-flags--id']/..");
     private final SelenideElement bg = $x("//i[@class='cc-flags cc-flags--bg']/..");
