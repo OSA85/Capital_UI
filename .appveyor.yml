@@ -7,8 +7,8 @@ branches:
     - main
 
 build: off
-  
+install:
+  - chmod +x gradlew
 
 build_script:
-  - chmod +x gradlew
   - ./gradlew test -Dselenide.headless=true --info
