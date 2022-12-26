@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.sleep;
 @Data
 public class MenuLicense {
 
-    private final SelenideElement listLicense = $x("//div [@class='cc-toggleLicense js-toggleLicense']"); // $x("//button [@class='cc-toggleLicense__btn']');
+    private final SelenideElement listLicense =$x("//button [@class='cc-toggleLicense__btn']");// $x("//div [@class='cc-toggleLicense js-toggleLicense']"); //
 
     private final SelenideElement licenseASIC = $x("//a[@href='https://capital.com/?license=ASIC']");
     private final SelenideElement licenseFCA = $x("//a[@href='https://capital.com/?license=FCA']");

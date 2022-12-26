@@ -17,7 +17,7 @@ abstract class BaseTest {
         Configuration.browser = "chrome";
         Configuration.driverManagerEnabled = true;
         Configuration.browserSize = "1920x1080";
-        Configuration.headless = true;
+        Configuration.headless = false;
         Configuration.holdBrowserOpen = false;
         Configuration.pageLoadTimeout = 45000;
         MainPage mainPage = new MainPage(BASE_URL);

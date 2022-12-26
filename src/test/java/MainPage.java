@@ -43,6 +43,7 @@ public class MainPage {
     private final SelenideElement body = $x("//body");
     private final SelenideElement buttonCookieRejectAll = $x("//button[@id='onetrust-reject-all-handler']");
     private final SelenideElement footerDescription = $x("//div [@class='footer__info cc-boxLg dark']");
+    private final SelenideElement buttonMenu = $x("//button [@class=\"cc-header__btn cc-header__btn--burger js-burger\"]");
 
 
 
@@ -65,6 +66,9 @@ public class MainPage {
         return new TradeNow();
     }
 
-
+    public Menu openMenu(){
+        buttonMenu.click();
+        return new Menu();
+    }
 
 }
