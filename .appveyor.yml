@@ -14,6 +14,5 @@ build_script:
   - ./gradlew test -Dselenide.headless=true --info
   - ./gradlew allureReport -Dselenide.headless=true --info
 artifacts:
-  paths:
-    - build/reports/allure-report/allureReport/*
+  - build/reports/allure-report/allureReport/*
 
