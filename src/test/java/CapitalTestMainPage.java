@@ -162,7 +162,7 @@ public class CapitalTestMainPage extends BaseTest{
                     tradeNow.getCloseFormSignUp().click();
                 } else {
                     logIn.getFormLogin().isDisplayed();
-                    logIn.getButtonCloseFormLogin();
+                    logIn.getButtonCloseFormLogin().click();
                 }
             }
         } else {
@@ -176,7 +176,7 @@ public class CapitalTestMainPage extends BaseTest{
                                     tradeNow.getCloseFormSignUp().click();
                       } else {
                             logIn.getFormLogin().isDisplayed();
-                            logIn.getButtonCloseFormLogin();
+                            logIn.getButtonCloseFormLogin().click();
                       }
             }
         }
@@ -194,7 +194,7 @@ public class CapitalTestMainPage extends BaseTest{
             tradeNow.getCloseFormSignUp().click();
         } else {
             logIn.getFormLogin().isDisplayed();
-            logIn.getButtonCloseFormLogin();
+            logIn.getButtonCloseFormLogin().click();
         }
     }
 
@@ -210,7 +210,7 @@ public class CapitalTestMainPage extends BaseTest{
             tradeNow.getCloseFormSignUp().click();
         } else {
             logIn.getFormLogin().isDisplayed();
-            logIn.getButtonCloseFormLogin();
+            logIn.getButtonCloseFormLogin().click();
         }
     }
     @Test
@@ -225,7 +225,7 @@ public class CapitalTestMainPage extends BaseTest{
             tradeNow.getCloseFormSignUp().click();
         } else {
             logIn.getFormLogin().isDisplayed();
-            logIn.getButtonCloseFormLogin();
+            logIn.getButtonCloseFormLogin().click();
         }
     }
 
@@ -250,7 +250,7 @@ public class CapitalTestMainPage extends BaseTest{
             tradeNow.getCloseFormSignUp().click();
         } else {
             logIn.getFormLogin().isDisplayed();
-            logIn.getButtonCloseFormLogin();
+            logIn.getButtonCloseFormLogin().click();
         }
     }
 
@@ -266,7 +266,7 @@ public class CapitalTestMainPage extends BaseTest{
             tradeNow.getCloseFormSignUp().click();
         } else {
             logIn.getFormLogin().isDisplayed();
-            logIn.getButtonCloseFormLogin();
+            logIn.getButtonCloseFormLogin().click();
         }
     }
 
@@ -283,7 +283,7 @@ public class CapitalTestMainPage extends BaseTest{
                 tradeNow.getCloseFormSignUp().click();
             } else {
                 logIn.getFormLogin().isDisplayed();
-                logIn.getButtonCloseFormLogin();
+                logIn.getButtonCloseFormLogin().click();
             }
         }
     }
@@ -300,7 +300,7 @@ public class CapitalTestMainPage extends BaseTest{
             tradeNow.getCloseFormSignUp().click();
         } else {
             logIn.getFormLogin().isDisplayed();
-            logIn.getButtonCloseFormLogin();
+            logIn.getButtonCloseFormLogin().click();
         }
     }
     @Test
