@@ -20,7 +20,6 @@ public class MainPage {
     private final SelenideElement tradeInstrumentFormOld = $x("//div [@class='tools tools--light js-tools_cc_ab_63_5']");
     private final SelenideElement tradeInstrumentFormNew = $x("//tbody [@class='tabs__pane active']");
     private final SelenideElement tradeInstrumentGraph = $x(" //canvas[@id='chartWrap']");
-    //div [@class='tabs tabs--type1-sm js-tabs marketWidget js-analyticsVisible js-tools_cc_ab_63_5']
     private final ElementsCollection buttonsTradeInTradingInstrumentFormOld = $$x("//div [@class='tools__list ihome-Most']//a[@data-type='wdg_markets']");
     private final ElementsCollection buttonsTradeInTradingInstrumentFormNew = $$x("//tbody[@class='tabs__pane active']//a[@data-type='wdg_markets']");
 
