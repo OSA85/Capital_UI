@@ -10,6 +10,7 @@ public class MarketsPage {
     TradeNow tradeNow = new TradeNow();
     LogIn logIn = new LogIn();
 
+
     public void checkButtonSell(){
         for ( SelenideElement el : widgetTradingInstrument.getButtonsSell()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
@@ -57,5 +58,6 @@ public class MarketsPage {
             }
         };
     }
+
 
 }

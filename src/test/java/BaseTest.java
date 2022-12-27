@@ -12,6 +12,12 @@ abstract class BaseTest {
     private final static String BASE_URL = "https://capital.com/";
     MainPage mainPage = new MainPage();
     LangPage langPage = new LangPage();
+    StillLookingFor stillLookingFor = new StillLookingFor();
+    MenuLicense menuLicense = new MenuLicense();
+    MainBanner mainBanner = new MainBanner();
+    LogIn logIn = new LogIn();
+    TradeNow tradeNow = new TradeNow();
+
     public MainPage setUp() {
         WebDriverManager.chromedriver().setup();
         Configuration.browser = "chrome";

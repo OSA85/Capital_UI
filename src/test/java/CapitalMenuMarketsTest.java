@@ -42,4 +42,29 @@ public class CapitalMenuMarketsTest extends BaseTest {
         menu.getTitleMarkets().click();
         menu.marketsPage().checkButtonBuy();
     }
+
+    @Test
+    @DisplayName("Кнопка Buy на Widget 'Trading instrument' заголовка 'Markets'")
+    public void checkButtonCreateAccountOnTheBlockStillLookingForTest(){
+        mainPage.openMenu();
+        menu.getTitleMarkets().click();
+        stillLookingFor.getBlockBlackStillLookingFor().scrollTo();
+        if (tradeNow.getFormSignUp1().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        if (tradeNow.getFormSignUp2().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        stillLookingFor.getButtonCreateBlockStillLooking().click();
+        sleep(1000);
+        if (tradeNow.getFormSignUp1().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        } else if (tradeNow.getFormSignUp2().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        } else {
+            logIn.getFormLogin().isDisplayed();
+            logIn.getButtonCloseFormLogin().click();
+        }
+    }
+
 }

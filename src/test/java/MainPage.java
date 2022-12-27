@@ -23,8 +23,8 @@ public class MainPage {
     private final ElementsCollection buttonsTradeInTradingInstrumentFormOld = $$x("//div [@class='tools__list ihome-Most']//a[@data-type='wdg_markets']");
     private final ElementsCollection buttonsTradeInTradingInstrumentFormNew = $$x("//tbody[@class='tabs__pane active']//a[@data-type='wdg_markets']");
 
-    private final SelenideElement blockStillLooking = $x("//section [@class='regSteps cc-boxLg mainConstuctor__item mainConstuctor__item--fullwidth grey']");
-    private final SelenideElement buttonCreateBlockStillLooking = $x("// i [@class='regSteps__item js_signup']");
+    private final SelenideElement blockWhiteStillLooking = $x("//section [@class='regSteps cc-boxLg mainConstuctor__item mainConstuctor__item--fullwidth grey']");
+//    private final SelenideElement buttonCreateWhiteBlockStillLooking = $x("// i [@class='regSteps__item js_signup']");
     private final SelenideElement blockMarketAnalysis = $x("//div [@class='flex flex-wrap']//h3 [text()='Market analysis']");
     private final SelenideElement buttonTradeNowBlockMarketAnalysis = $x("//div [@class='cc-sliderFade__item active']//div[text()='Trade Now']");
     private final SelenideElement blockExploreOurPlatform = $x("//section [@class='brick cc-boxLg grey']");
@@ -43,7 +43,7 @@ public class MainPage {
     private final SelenideElement body = $x("//body");
     private final SelenideElement buttonCookieRejectAll = $x("//button[@id='onetrust-reject-all-handler']");
     private final SelenideElement footerDescription = $x("//div [@class='footer__info cc-boxLg dark']");
-    private final SelenideElement buttonMenu = $x("//button [@class=\"cc-header__btn cc-header__btn--burger js-burger\"]");
+    private final SelenideElement buttonMenu = $x("//button [@class='cc-header__btn cc-header__btn--burger js-burger']");
 
 
 

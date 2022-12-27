@@ -14,11 +14,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CapitalMainPageTest extends BaseTest{
     private final String email = "ob1din.ser@yandex.ru";
     private final String password = "Qwerty123!";
-    LangPage langPage = new LangPage();
-    MenuLicense menuLicense = new MenuLicense();
-    MainBanner mainBanner = new MainBanner();
-    LogIn logIn = new LogIn();
-    TradeNow tradeNow = new TradeNow();
 
     @Test
     @DisplayName("Проверка установки лицензий и что в футере их описание")
@@ -190,8 +185,8 @@ public class CapitalMainPageTest extends BaseTest{
     @Test
     @DisplayName("Открытие формы блока 'Still looking for a broker you can trust?'")
     public void checkButtonInBlockStillLooking(){
-        mainPage.getBlockStillLooking().scrollTo();
-        mainPage.getButtonCreateBlockStillLooking().click();
+        mainPage.getBlockWhiteStillLooking().scrollTo();
+        stillLookingFor.getButtonCreateBlockStillLooking().click();
         sleep(1000);
         if (tradeNow.getFormSignUp1().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
