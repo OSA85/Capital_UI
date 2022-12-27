@@ -49,6 +49,12 @@ public class CapitalMainPageTest extends BaseTest{
     @DisplayName("Проверка соответветствия названия языков на странице")
     public void checkNameLanguage(){
         mainPage.openLangPage();
+        if (tradeNow.getFormSignUp1().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        if (tradeNow.getFormSignUp2().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
         assertEquals ("English", langPage.getEnglish().getText());
         assertEquals ("العَرَبِيَّة", langPage.getArab().getText());
         assertEquals ("Bahasa Indonesia", langPage.getId().getText());
@@ -257,6 +263,12 @@ public class CapitalMainPageTest extends BaseTest{
     @DisplayName("Открытие формы блока 'Trading calculator'")
     public void checkButtonInBlockTradingСalculator(){
         mainPage.getBlockTradingСalculator().scrollTo();
+        if (tradeNow.getFormSignUp1().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        if (tradeNow.getFormSignUp2().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
         mainPage.getButtonStartBlockTradingСalculator().click();
         sleep(1000);
         if (tradeNow.getFormSignUp1().isDisplayed()) {
@@ -273,6 +285,12 @@ public class CapitalMainPageTest extends BaseTest{
     @DisplayName("Открытие формы блока 'Trader's Dashboard'")
     public void checkButtonInBlockTraderDashboard(){
         mainPage.getButtonStartBlockTradingСalculator().scrollTo();
+        if (tradeNow.getFormSignUp1().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        if (tradeNow.getFormSignUp2().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
         for (SelenideElement el : mainPage.getButtonTradeBlockTraderDashboard()){
             el.click();
             sleep(1000);
@@ -319,6 +337,12 @@ public class CapitalMainPageTest extends BaseTest{
         mainPage.getBody().sendKeys(Keys.CONTROL, Keys.END);
         if (mainPage.getButtonCookieRejectAll().isDisplayed()){
             mainPage.getButtonCookieRejectAll().click();
+        }
+        if (tradeNow.getFormSignUp1().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        if (tradeNow.getFormSignUp2().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
         }
         mainPage.getButtonTermsAndPolicies().click();
         webdriver().shouldHave(urlContaining("https://capital.com/terms-and-policies"), Duration.ofSeconds(5));
