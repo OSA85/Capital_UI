@@ -11,15 +11,15 @@ public class MarketsPage {
     LogIn logIn = new LogIn();
 
     public void checkButtonSell(){
-        if (tradeNow.getFormSignUp1().isDisplayed()) {
-            tradeNow.getCloseFormSignUp().click();
-        } else {
-            tradeNow.getFormSignUp2().isDisplayed();
-            tradeNow.getCloseFormSignUp().click();
-        }
         for ( SelenideElement el : widgetTradingInstrument.getButtonsSell()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
                 mainPage.getButtonCookieRejectAll().click();
+            }
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
             }
             el.click();
             sleep(1000);
@@ -35,15 +35,15 @@ public class MarketsPage {
     }
 
     public void checkButtonBuy(){
-        if (tradeNow.getFormSignUp1().isDisplayed()) {
-            tradeNow.getCloseFormSignUp().click();
-        } else {
-            tradeNow.getFormSignUp2().isDisplayed();
-            tradeNow.getCloseFormSignUp().click();
-        }
         for ( SelenideElement el : widgetTradingInstrument.getButtonsBuy()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
                 mainPage.getButtonCookieRejectAll().click();
+            }
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            if (tradeNow.getFormSignUp2().isDisplayed())  {
+                tradeNow.getCloseFormSignUp().click();
             }
             el.click();
             sleep(1000);
