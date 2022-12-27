@@ -217,6 +217,12 @@ public class CapitalMainPageTest extends BaseTest{
     @DisplayName("Открытие формы блока 'Explore our platform'")
     public void checkButtonInBlockExploreOurPlatform(){
         mainPage.getBlockExploreOurPlatform().scrollTo();
+        if (tradeNow.getFormSignUp1().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        if (tradeNow.getFormSignUp2().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
         mainPage.getButtonTryNowBlockExploreOurPlatform().click();
         sleep(1000);
         if (tradeNow.getFormSignUp1().isDisplayed()) {
