@@ -17,13 +17,15 @@ abstract class BaseTest {
     MainBanner mainBanner = new MainBanner();
     LogIn logIn = new LogIn();
     TradeNow tradeNow = new TradeNow();
+    Menu menu = new Menu();
+    ForexPage forexPage = new ForexPage();
 
     public MainPage setUp() {
         WebDriverManager.chromedriver().setup();
         Configuration.browser = "chrome";
         Configuration.driverManagerEnabled = true;
         Configuration.browserSize = "1920x1080";
-        Configuration.headless = true;
+        Configuration.headless = false;
         Configuration.holdBrowserOpen = false;
         Configuration.pageLoadTimeout = 45000;
         MainPage mainPage = new MainPage(BASE_URL);
