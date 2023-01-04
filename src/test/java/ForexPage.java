@@ -2,6 +2,8 @@ import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import lombok.Data;
 
+import java.util.Random;
+
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -14,6 +16,10 @@ private final SelenideElement listPages = $x("//div [@id='search_results']//ul")
 private final ElementsCollection listButtonSell = $$x("//td [@class='sell text-right']// a [@data-type='wdg_markets']");
 private final ElementsCollection listButtonBuy = $$x("//td [@class='buy text-right']// a [@data-type='wdg_markets']");
 
+public SelenideElement choseRandomButton(ElementsCollection elementsCollection){
+    int i = new Random().nextInt(elementsCollection.size());
+    return  elementsCollection.get(i);
+}
 
 
 }
