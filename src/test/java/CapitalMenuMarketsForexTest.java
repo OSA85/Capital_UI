@@ -660,4 +660,69 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
             }
         }
     }
+
+    @Test
+    @DisplayName("Открытие формы регистрации или авторизации кнопоки 'Create & verify your account'" +
+            " торгуемых пар в разделе 'Forex'")
+    public void checkButtonCreateForSingUpFormMenuMarketsForexTradingPareTest(){
+        mainPage.openMenu();
+        menu.forexPage();
+        if (tradeNow.getFormSignUp1().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        if (tradeNow.getFormSignUp2().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        SelenideElement buttonNamePare = forexPage.choseRandomButton(forexPage.getListButtonNamePare());
+        if (buttonNamePare.isDisplayed()){
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
+            buttonNamePare.click();
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            stillLookingFor.getBlockBlackStillLookingFor().scrollTo();
+            stillLookingFor.getButtonCreateBlockStillLooking().click();
+            sleep(1000);
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else {
+                logIn.getFormLogin().isDisplayed();
+                logIn.getButtonCloseFormLogin().click();
+            }
+        } else {
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
+            buttonNamePare.scrollTo();
+            buttonNamePare.click();
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            stillLookingFor.getBlockBlackStillLookingFor().scrollTo();
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
+            stillLookingFor.getButtonCreateBlockStillLooking().click();
+            sleep(1000);
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else {
+                logIn.getFormLogin().isDisplayed();
+                logIn.getButtonCloseFormLogin().click();
+            }
+        }
+    }
+
 }
