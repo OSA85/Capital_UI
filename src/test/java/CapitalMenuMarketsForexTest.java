@@ -193,4 +193,471 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
         }
     }
 
+    @Test
+    @DisplayName("Открытие формы регистрации или авторизации кнопоки 'Add to favourite' торгуемых пар в разделе 'Forex'")
+    public void checkButtonAddToFavouriteForSingUpFormMenuMarketsForexTradingPareTest(){
+        mainPage.openMenu();
+        menu.forexPage();
+        if (tradeNow.getFormSignUp1().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        if (tradeNow.getFormSignUp2().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        SelenideElement buttonNamePare = forexPage.choseRandomButton(forexPage.getListButtonNamePare());
+        if (buttonNamePare.isDisplayed()){
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
+            buttonNamePare.click();
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            tradingParePage.getButtonAddToFavourite().click();
+            sleep(1000);
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else {
+                logIn.getFormLogin().isDisplayed();
+                logIn.getButtonCloseFormLogin().click();
+            }
+        } else {
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
+            buttonNamePare.scrollTo();
+            buttonNamePare.click();
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            tradingParePage.getButtonAddToFavourite().click();
+            sleep(1000);
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else {
+                logIn.getFormLogin().isDisplayed();
+                logIn.getButtonCloseFormLogin().click();
+            }
+        }
+    }
+
+    @Test
+    @DisplayName("Открытие формы регистрации или авторизации кнопоки 'Bell' торгуемых пар в разделе 'Forex'")
+    public void checkButtonBellForSingUpFormMenuMarketsForexTradingPareTest(){
+        mainPage.openMenu();
+        menu.forexPage();
+        if (tradeNow.getFormSignUp1().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        if (tradeNow.getFormSignUp2().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        SelenideElement buttonNamePare = forexPage.choseRandomButton(forexPage.getListButtonNamePare());
+        if (buttonNamePare.isDisplayed()){
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
+            buttonNamePare.click();
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            tradingParePage.getButtonBell().click();
+            sleep(1000);
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else {
+                logIn.getFormLogin().isDisplayed();
+                logIn.getButtonCloseFormLogin().click();
+            }
+        } else {
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
+            buttonNamePare.scrollTo();
+            buttonNamePare.click();
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            tradingParePage.getButtonBell().click();
+            sleep(1000);
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else {
+                logIn.getFormLogin().isDisplayed();
+                logIn.getButtonCloseFormLogin().click();
+            }
+        }
+    }
+    @Test
+    @DisplayName("Открытие формы регистрации или авторизации кнопоки 'View detailed chart' торгуемых пар в разделе 'Forex'")
+    public void checkButtonViewDetailedChartForSingUpFormMenuMarketsForexTradingPareTest(){
+        mainPage.openMenu();
+        menu.forexPage();
+        if (tradeNow.getFormSignUp1().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        if (tradeNow.getFormSignUp2().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        SelenideElement buttonNamePare = forexPage.choseRandomButton(forexPage.getListButtonNamePare());
+        if (buttonNamePare.isDisplayed()){
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
+            buttonNamePare.click();
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            tradingParePage.getButtonViewDetailedChart().click();
+            sleep(1000);
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else {
+                logIn.getFormLogin().isDisplayed();
+                logIn.getButtonCloseFormLogin().click();
+            }
+        } else {
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
+            buttonNamePare.scrollTo();
+            buttonNamePare.click();
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            tradingParePage.getButtonViewDetailedChart().click();
+            sleep(1000);
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else {
+                logIn.getFormLogin().isDisplayed();
+                logIn.getButtonCloseFormLogin().click();
+            }
+        }
+    }
+
+    @Test
+    @DisplayName("Открытие формы регистрации или авторизации кнопоки 'Sell' торгуемых пар в разделе 'Forex'")
+    public void checkButtonSellForSingUpFormMenuMarketsForexTradingPareTest(){
+        mainPage.openMenu();
+        menu.forexPage();
+        if (tradeNow.getFormSignUp1().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        if (tradeNow.getFormSignUp2().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        SelenideElement buttonNamePare = forexPage.choseRandomButton(forexPage.getListButtonNamePare());
+        if (buttonNamePare.isDisplayed()){
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
+            buttonNamePare.click();
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            tradingParePage.getButtonSell().click();
+            sleep(1000);
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else {
+                logIn.getFormLogin().isDisplayed();
+                logIn.getButtonCloseFormLogin().click();
+            }
+        } else {
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
+            buttonNamePare.scrollTo();
+            buttonNamePare.click();
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            tradingParePage.getButtonSell().click();
+            sleep(1000);
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else {
+                logIn.getFormLogin().isDisplayed();
+                logIn.getButtonCloseFormLogin().click();
+            }
+        }
+    }
+
+    @Test
+    @DisplayName("Открытие формы регистрации или авторизации кнопоки 'Buy' торгуемых пар в разделе 'Forex'")
+    public void checkButtonBuyForSingUpFormMenuMarketsForexTradingPareTest(){
+        mainPage.openMenu();
+        menu.forexPage();
+        if (tradeNow.getFormSignUp1().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        if (tradeNow.getFormSignUp2().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        SelenideElement buttonNamePare = forexPage.choseRandomButton(forexPage.getListButtonNamePare());
+        if (buttonNamePare.isDisplayed()){
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
+            buttonNamePare.click();
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            tradingParePage.getButtonBuy().click();
+            sleep(1000);
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else {
+                logIn.getFormLogin().isDisplayed();
+                logIn.getButtonCloseFormLogin().click();
+            }
+        } else {
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
+            buttonNamePare.scrollTo();
+            buttonNamePare.click();
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            tradingParePage.getButtonBuy().click();
+            sleep(1000);
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else {
+                logIn.getFormLogin().isDisplayed();
+                logIn.getButtonCloseFormLogin().click();
+            }
+        }
+    }
+
+    @Test
+    @DisplayName("Открытие формы регистрации или авторизации кнопоки 'Try now' торгуемых пар в разделе 'Forex'")
+    public void checkButtonTryNowForSingUpFormMenuMarketsForexTradingPareTest(){
+        mainPage.openMenu();
+        menu.forexPage();
+        if (tradeNow.getFormSignUp1().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        if (tradeNow.getFormSignUp2().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        SelenideElement buttonNamePare = forexPage.choseRandomButton(forexPage.getListButtonNamePare());
+        if (buttonNamePare.isDisplayed()){
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
+            buttonNamePare.click();
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            mainPage.getButtonTryNowBlockWhyChoose().click();
+            sleep(1000);
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else {
+                logIn.getFormLogin().isDisplayed();
+                logIn.getButtonCloseFormLogin().click();
+            }
+        } else {
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
+            buttonNamePare.scrollTo();
+            buttonNamePare.click();
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            mainPage.getButtonTryNowBlockWhyChoose().click();
+            sleep(1000);
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else {
+                logIn.getFormLogin().isDisplayed();
+                logIn.getButtonCloseFormLogin().click();
+            }
+        }
+    }
+    @Test
+    @DisplayName("Открытие формы регистрации или авторизации кнопоки 'Start trading'" +
+            " торгуемых пар в разделе 'Forex'")
+    public void checkButtonStartTraidingForSingUpFormMenuMarketsForexTradingPareTest(){
+        mainPage.openMenu();
+        menu.forexPage();
+        if (tradeNow.getFormSignUp1().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        if (tradeNow.getFormSignUp2().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        SelenideElement buttonNamePare = forexPage.choseRandomButton(forexPage.getListButtonNamePare());
+        if (buttonNamePare.isDisplayed()){
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
+            buttonNamePare.click();
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            mainPage.getBlockTradingСalculator().scrollTo();
+            mainPage.getButtonStartBlockTradingСalculator().click();
+            sleep(1000);
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else {
+                logIn.getFormLogin().isDisplayed();
+                logIn.getButtonCloseFormLogin().click();
+            }
+        } else {
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
+            buttonNamePare.scrollTo();
+            buttonNamePare.click();
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            mainPage.getBlockTradingСalculator().scrollTo();
+            mainPage.getButtonStartBlockTradingСalculator().click();
+            sleep(1000);
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else {
+                logIn.getFormLogin().isDisplayed();
+                logIn.getButtonCloseFormLogin().click();
+            }
+        }
+    }
+
+    @Test
+    @DisplayName("Открытие формы регистрации или авторизации кнопоки 'Trade Now'" +
+            " торгуемых пар в разделе 'Forex'")
+    public void checkButtonTradeNowForSingUpFormMenuMarketsForexTradingPareTest(){
+        mainPage.openMenu();
+        menu.forexPage();
+        if (tradeNow.getFormSignUp1().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        if (tradeNow.getFormSignUp2().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        SelenideElement buttonNamePare = forexPage.choseRandomButton(forexPage.getListButtonNamePare());
+        if (buttonNamePare.isDisplayed()){
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
+            buttonNamePare.click();
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            mainPage.getButtonStartBlockTradingСalculator().scrollTo();
+            mainPage.getButtonTradeNowBlockMarketAnalysis().click();
+            sleep(1000);
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else {
+                logIn.getFormLogin().isDisplayed();
+                logIn.getButtonCloseFormLogin().click();
+            }
+        } else {
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
+            buttonNamePare.scrollTo();
+            buttonNamePare.click();
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            mainPage.getButtonStartBlockTradingСalculator().scrollTo();
+            mainPage.getButtonTradeNowBlockMarketAnalysis().click();
+            sleep(1000);
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            } else {
+                logIn.getFormLogin().isDisplayed();
+                logIn.getButtonCloseFormLogin().click();
+            }
+        }
+    }
 }
