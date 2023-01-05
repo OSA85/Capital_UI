@@ -1,3 +1,4 @@
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import lombok.Data;
 import org.junit.jupiter.api.DisplayName;
@@ -6,10 +7,12 @@ import org.junit.jupiter.api.Test;
 import java.time.Duration;
 import java.util.Random;
 
+import static com.codeborne.selenide.Condition.exactText;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.sleep;
 import static com.codeborne.selenide.Selenide.webdriver;
 import static com.codeborne.selenide.WebDriverConditions.urlContaining;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class CapitalMenuMarketsForexTest extends BaseTest {
@@ -155,4 +158,39 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
             webdriver().shouldHave(urlContaining("https://capital.com/trading/platform/charting"), Duration.ofSeconds(5));
         }
     }
+
+    @Test
+    @DisplayName("Открытие правильной страницы торгуемых пар виджета 'Live Forex prices' заголовка 'Markets' раздела 'Forex'")
+    public void checkOpenPageNamePareOnTheWidgetLiveForexForMenuMarketsForexTest(){
+        mainPage.openMenu();
+        menu.forexPage();
+        if (tradeNow.getFormSignUp1().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        if (tradeNow.getFormSignUp2().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        SelenideElement buttonNamePare = forexPage.choseRandomButton(forexPage.getListButtonNamePare());
+        String urlTradingParePage = buttonNamePare.getAttribute("href");
+
+        if (buttonNamePare.isDisplayed()){
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
+            buttonNamePare.click();
+            tradingParePage.getNameTradingPare().shouldHave(text(buttonNamePare.getText()));
+
+            webdriver().shouldHave(urlContaining(urlTradingParePage), Duration.ofSeconds(5));
+
+        } else {
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
+            buttonNamePare.scrollTo();
+            buttonNamePare.click();
+            tradingParePage.getNameTradingPare().shouldHave(text(buttonNamePare.getText()));
+            webdriver().shouldHave(urlContaining(urlTradingParePage), Duration.ofSeconds(5));
+        }
+    }
+
 }

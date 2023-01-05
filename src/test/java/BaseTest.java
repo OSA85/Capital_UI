@@ -10,6 +10,7 @@ import org.junit.jupiter.api.BeforeEach;
 
 abstract class BaseTest {
     private final static String BASE_URL = "https://capital.com/";
+    TradingParePage tradingParePage = new TradingParePage();
     MainPage mainPage = new MainPage();
     LangPage langPage = new LangPage();
     StillLookingFor stillLookingFor = new StillLookingFor();

@@ -15,6 +15,8 @@ private final SelenideElement buttonStartTrading = $x("//div [@class='section ba
 private final SelenideElement listPages = $x("//div [@id='search_results']//ul");
 private final ElementsCollection listButtonSell = $$x("//td [@class='sell text-right']// a [@data-type='wdg_markets']");
 private final ElementsCollection listButtonBuy = $$x("//td [@class='buy text-right']// a [@data-type='wdg_markets']");
+private final ElementsCollection listButtonNamePare = $$x("//p [@class='table__info stringEllipsed']//a");
+
 
 public SelenideElement choseRandomButton(ElementsCollection elementsCollection){
     int i = new Random().nextInt(elementsCollection.size());
