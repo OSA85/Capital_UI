@@ -725,4 +725,91 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
         }
     }
 
+    @Test
+    @DisplayName("Открытие платформы через 'Go to platform' в 'Long position overnight fee'" +
+            " торгуемых пар в разделе 'Forex'")
+    public void checkButtonGoToPlatformLongFormMenuMarketsForexTradingPareTest(){
+        mainPage.openMenu();
+        menu.forexPage();
+        if (tradeNow.getFormSignUp1().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        if (tradeNow.getFormSignUp2().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        SelenideElement buttonNamePare = forexPage.choseRandomButton(forexPage.getListButtonNamePare());
+        if (buttonNamePare.isDisplayed()){
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
+            buttonNamePare.click();
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            tradingParePage.getLongPositionOvernightFee().click();
+            tradingParePage.getLongPositionOvernightFeeGoToPlatform().click();
+            webdriver().shouldHave(urlContaining("https://capital.com/trading/platform"), Duration.ofSeconds(5));
+        } else {
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
+            buttonNamePare.click();
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            tradingParePage.getLongPositionOvernightFee().click();
+            tradingParePage.getLongPositionOvernightFeeGoToPlatform().click();
+            webdriver().shouldHave(urlContaining("https://capital.com/trading/platform"), Duration.ofSeconds(5));
+        }
+    }
+
+    @Test
+    @DisplayName("Открытие платформы через 'Go to platform' в 'Short position overnight fee'" +
+            " торгуемых пар в разделе 'Forex'")
+    public void checkButtonGoToPlatformShortFormMenuMarketsForexTradingPareTest(){
+        mainPage.openMenu();
+        menu.forexPage();
+        if (tradeNow.getFormSignUp1().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        if (tradeNow.getFormSignUp2().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        SelenideElement buttonNamePare = forexPage.choseRandomButton(forexPage.getListButtonNamePare());
+        if (buttonNamePare.isDisplayed()){
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
+            buttonNamePare.click();
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            tradingParePage.getShortPositionOvernightFee().click();
+            tradingParePage.getShortPositionOvernightFeeGoToPlatform().click();
+            webdriver().shouldHave(urlContaining("https://capital.com/trading/platform"), Duration.ofSeconds(5));
+        } else {
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
+            buttonNamePare.click();
+            if (tradeNow.getFormSignUp1().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            if (tradeNow.getFormSignUp2().isDisplayed()) {
+                tradeNow.getCloseFormSignUp().click();
+            }
+            tradingParePage.getShortPositionOvernightFee().click();
+            tradingParePage.getShortPositionOvernightFeeGoToPlatform().click();
+            webdriver().shouldHave(urlContaining("https://capital.com/trading/platform"), Duration.ofSeconds(5));
+        }
+    }
 }

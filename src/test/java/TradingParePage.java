@@ -11,6 +11,9 @@ public class TradingParePage {
     private final SelenideElement buttonSell = $x("//a [@data-type='market_sell']");
     private final SelenideElement buttonBuy = $x("//a [@data-type='market_buy']");
     private final SelenideElement peopleAlsoWatch = $x("//h2[text()='People also watch']");
-
+    private final SelenideElement longPositionOvernightFee = $x("//* [text()[contains(., ' Long ')]]");
+    private final SelenideElement shortPositionOvernightFee = $x("//div [@class='toolInfo']");
+    private final SelenideElement longPositionOvernightFeeGoToPlatform = $x("//div [@class='toolInfo']//a");
+    private final SelenideElement shortPositionOvernightFeeGoToPlatform = $x("//div [@class='toolInfo']//a");
 
 }
