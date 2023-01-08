@@ -58,6 +58,9 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
         if (tradeNow.getFormSignUp2().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
+        if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+            mainPage.getButtonCookieRejectAll().click();
+        }
         forexPage.getButtonStartTrading().click();
         sleep(1000);
         if (tradeNow.getFormSignUp1().isDisplayed()) {
@@ -110,7 +113,7 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
         if (tradeNow.getFormSignUp2().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
-        SelenideElement buttonSell = forexPage.choseRandomButton(forexPage.getListButtonSell());
+        SelenideElement buttonSell = choseRandomButton(forexPage.getListButtonSell());
 
         if (buttonSell.isDisplayed()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
@@ -140,7 +143,7 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
         if (tradeNow.getFormSignUp2().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
-        SelenideElement buttonBuy = forexPage.choseRandomButton(forexPage.getListButtonBuy());
+        SelenideElement buttonBuy = choseRandomButton(forexPage.getListButtonBuy());
 
         if (buttonBuy.isDisplayed()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
@@ -170,7 +173,7 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
         if (tradeNow.getFormSignUp2().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
-        SelenideElement buttonNamePare = forexPage.choseRandomButton(forexPage.getListButtonNamePare());
+        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         String urlTradingParePage = buttonNamePare.getAttribute("href");
 
         if (buttonNamePare.isDisplayed()){
@@ -204,7 +207,7 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
         if (tradeNow.getFormSignUp2().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
-        SelenideElement buttonNamePare = forexPage.choseRandomButton(forexPage.getListButtonNamePare());
+        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (buttonNamePare.isDisplayed()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
                 mainPage.getButtonCookieRejectAll().click();
@@ -262,7 +265,7 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
         if (tradeNow.getFormSignUp2().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
-        SelenideElement buttonNamePare = forexPage.choseRandomButton(forexPage.getListButtonNamePare());
+        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (buttonNamePare.isDisplayed()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
                 mainPage.getButtonCookieRejectAll().click();
@@ -319,7 +322,7 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
         if (tradeNow.getFormSignUp2().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
-        SelenideElement buttonNamePare = forexPage.choseRandomButton(forexPage.getListButtonNamePare());
+        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (buttonNamePare.isDisplayed()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
                 mainPage.getButtonCookieRejectAll().click();
@@ -377,7 +380,7 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
         if (tradeNow.getFormSignUp2().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
-        SelenideElement buttonNamePare = forexPage.choseRandomButton(forexPage.getListButtonNamePare());
+        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (buttonNamePare.isDisplayed()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
                 mainPage.getButtonCookieRejectAll().click();
@@ -435,7 +438,7 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
         if (tradeNow.getFormSignUp2().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
-        SelenideElement buttonNamePare = forexPage.choseRandomButton(forexPage.getListButtonNamePare());
+        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (buttonNamePare.isDisplayed()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
                 mainPage.getButtonCookieRejectAll().click();
@@ -493,7 +496,7 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
         if (tradeNow.getFormSignUp2().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
-        SelenideElement buttonNamePare = forexPage.choseRandomButton(forexPage.getListButtonNamePare());
+        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (buttonNamePare.isDisplayed()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
                 mainPage.getButtonCookieRejectAll().click();
@@ -542,7 +545,7 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
     @Test
     @DisplayName("Открытие формы регистрации или авторизации кнопоки 'Start trading'" +
             " торгуемых пар в разделе 'Forex'")
-    public void checkButtonStartTraidingForSingUpFormMenuMarketsForexTradingPareTest(){
+    public void checkButtonStartTradingForSingUpFormMenuMarketsForexTradingPareTest(){
         mainPage.openMenu();
         menu.forexPage();
         if (tradeNow.getFormSignUp1().isDisplayed()) {
@@ -551,7 +554,7 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
         if (tradeNow.getFormSignUp2().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
-        SelenideElement buttonNamePare = forexPage.choseRandomButton(forexPage.getListButtonNamePare());
+        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (buttonNamePare.isDisplayed()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
                 mainPage.getButtonCookieRejectAll().click();
@@ -612,7 +615,7 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
         if (tradeNow.getFormSignUp2().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
-        SelenideElement buttonNamePare = forexPage.choseRandomButton(forexPage.getListButtonNamePare());
+        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (buttonNamePare.isDisplayed()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
                 mainPage.getButtonCookieRejectAll().click();
@@ -673,7 +676,7 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
         if (tradeNow.getFormSignUp2().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
-        SelenideElement buttonNamePare = forexPage.choseRandomButton(forexPage.getListButtonNamePare());
+        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (buttonNamePare.isDisplayed()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
                 mainPage.getButtonCookieRejectAll().click();
@@ -737,7 +740,7 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
         if (tradeNow.getFormSignUp2().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
-        SelenideElement buttonNamePare = forexPage.choseRandomButton(forexPage.getListButtonNamePare());
+        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (buttonNamePare.isDisplayed()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
                 mainPage.getButtonCookieRejectAll().click();
@@ -781,7 +784,7 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
         if (tradeNow.getFormSignUp2().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
-        SelenideElement buttonNamePare = forexPage.choseRandomButton(forexPage.getListButtonNamePare());
+        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (buttonNamePare.isDisplayed()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
                 mainPage.getButtonCookieRejectAll().click();

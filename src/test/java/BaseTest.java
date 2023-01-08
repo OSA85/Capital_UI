@@ -1,5 +1,7 @@
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -7,6 +9,8 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+
+import java.util.Random;
 
 abstract class BaseTest {
     private final static String BASE_URL = "https://capital.com/";
@@ -20,6 +24,8 @@ abstract class BaseTest {
     TradeNow tradeNow = new TradeNow();
     Menu menu = new Menu();
     ForexPage forexPage = new ForexPage();
+    IndicesPage indicesPage = new IndicesPage();
+
 
     public MainPage setUp() {
         WebDriverManager.chromedriver().setup();
@@ -35,6 +41,11 @@ abstract class BaseTest {
         MenuLicense menuLicense = new MenuLicense();
         menuLicense.choseLicense(menuLicense.getLicenseFSA());
         return new MainPage();
+    }
+
+    public SelenideElement choseRandomButton(ElementsCollection elementsCollection){
+        int i = new Random().nextInt(elementsCollection.size());
+        return  elementsCollection.get(i);
     }
     @BeforeAll
     static void setUpAll() {

@@ -18,10 +18,4 @@ private final ElementsCollection listButtonBuy = $$x("//td [@class='buy text-rig
 private final ElementsCollection listButtonNamePare = $$x("//p [@class='table__info stringEllipsed']//a");
 
 
-public SelenideElement choseRandomButton(ElementsCollection elementsCollection){
-    int i = new Random().nextInt(elementsCollection.size());
-    return  elementsCollection.get(i);
-}
-
-
 }
