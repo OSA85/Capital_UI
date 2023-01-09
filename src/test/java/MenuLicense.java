@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.sleep;
 @Data
 public class MenuLicense {
 
-    private final SelenideElement listLicense =$x("//button [@class='cc-toggleLicense__btn']");// $x("//div [@class='cc-toggleLicense js-toggleLicense']"); //
+    private final SelenideElement listLicense =$x("//button [@class='cc-toggleLicense__btn']");
 
     private final SelenideElement licenseASIC = $x("//a[@href='https://capital.com/?license=ASIC']");
     private final SelenideElement licenseFCA = $x("//a[@href='https://capital.com/?license=FCA']");
@@ -26,35 +26,8 @@ public class MenuLicense {
         license.click();
     }
 
-//    public SelenideElement getListLicense() {
-//        return listLicense;
-//    }
-//
-//    public SelenideElement getLicenseASIC() {
-//        return licenseASIC;
-//    }
-//
-//    public SelenideElement getLicenseFCA() {
-//        return licenseFCA;
-//    }
-//
-//    public SelenideElement getLicenseCYSEC() {
-//        return licenseCYSEC;
-//    }
-//
-//    public SelenideElement getLicenseNBRB() {
-//        return licenseNBRB;
-//    }
-//
-//    public SelenideElement getLicenseLLC() {
-//        return licenseLLC;
-//    }
-//
-//    public SelenideElement getLicenseFSA() {
-//        return licenseFSA;
-//    }
-//
-//    public SelenideElement getOurGlobalOffices() {
-//        return ourGlobalOffices;
-//    }
+    public MainPage choseLicenseOnMainPage (SelenideElement license){
+        license.click();
+        return new MainPage();
+    }
 }

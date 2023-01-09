@@ -17,6 +17,7 @@ public class MainPage {
     private final SelenideElement buttonLogIn = $x("//a [@id='wg_loginBtn']");
     private final SelenideElement buttonTradeNow = $x("//a [@data-type='btn_header']");
     private final SelenideElement buttonLangSwitch = $x("//button [@data-target='langSwitch']");
+    private final SelenideElement buttonListLicense =$x("//button [@class='cc-toggleLicense__btn']");
     private final SelenideElement tradeInstrumentFormOld = $x("//div [@class='tools tools--light js-tools_cc_ab_63_5']");
     private final SelenideElement tradeInstrumentFormNew = $x("//tbody [@class='tabs__pane active']");
     private final SelenideElement tradeInstrumentGraph = $x(" //canvas[@id='chartWrap']");
@@ -24,7 +25,6 @@ public class MainPage {
     private final ElementsCollection buttonsTradeInTradingInstrumentFormNew = $$x("//tbody[@class='tabs__pane active']//a[@data-type='wdg_markets']");
 
     private final SelenideElement blockWhiteStillLooking = $x("//section [@class='regSteps cc-boxLg mainConstuctor__item mainConstuctor__item--fullwidth grey']");
-//    private final SelenideElement buttonCreateWhiteBlockStillLooking = $x("// i [@class='regSteps__item js_signup']");
     private final SelenideElement blockMarketAnalysis = $x("//div [@class='flex flex-wrap']//h3 [text()='Market analysis']");
     private final SelenideElement buttonTradeNowBlockMarketAnalysis = $x("//div [@class='cc-sliderFade__item active']//div[text()='Trade Now']");
     private final SelenideElement blockExploreOurPlatform = $x("//section [@class='brick cc-boxLg grey']");
@@ -55,6 +55,11 @@ public class MainPage {
     public LangPage openLangPage(){
         buttonLangSwitch.click();
         return new LangPage();
+    }
+
+    public MenuLicense openMenuLicense(){
+        buttonListLicense.click();
+        return new MenuLicense();
     }
 
     public LogIn openLogIn(){

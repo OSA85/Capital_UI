@@ -20,15 +20,13 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
     @Test
     @DisplayName("Кнопка 'Start Trading Now' в разделе 'Forex'")
     public void checkButtonStartTradingNowMenuMarketsForexTest(){
-        mainPage.openMenu();
-        menu.forexPage();
-        if (tradeNow.getFormSignUp1().isDisplayed()) {
-            tradeNow.getCloseFormSignUp().click();
-        }
-        if (tradeNow.getFormSignUp2().isDisplayed()) {
-            tradeNow.getCloseFormSignUp().click();
-        }
-        forexPage.getButtonStartTradingNow().click();
+        mainPage.openMenu().forexPage().getButtonStartTradingNow().click();
+//        if (tradeNow.getFormSignUp1().isDisplayed()) {
+//            tradeNow.getCloseFormSignUp().click();
+//        }
+//        if (tradeNow.getFormSignUp2().isDisplayed()) {
+//            tradeNow.getCloseFormSignUp().click();
+//        }
         sleep(1000);
         if (tradeNow.getFormSignUp1().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
@@ -43,8 +41,7 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
     @Test
     @DisplayName("Кнопка 'Start trading' в разделе 'Forex'")
     public void checkButtonStartTradingMenuMarketsForexTest(){
-        mainPage.openMenu();
-        menu.forexPage();
+        mainPage.openMenu().forexPage();
         if (tradeNow.getFormSignUp1().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
@@ -75,8 +72,7 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
     @Test
     @DisplayName("Кнопка 'Create account' раздела 'Still looking for a broker you can trust?' заголовка 'Markets' раздела 'Forex'")
     public void checkButtonCreateAccountOnTheBlockStillLookingForMenuMarketsForexTest(){
-        mainPage.openMenu();
-        menu.forexPage();
+        mainPage.openMenu().forexPage();
         if (tradeNow.getFormSignUp1().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
@@ -105,8 +101,7 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
     @Test
     @DisplayName("Открытие формы после нажатия на кнопку 'Sell' виджета 'Live Forex prices' заголовка 'Markets' раздела 'Forex'")
     public void checkButtonSellOnTheWidgetLiveForexForMenuMarketsForexTest(){
-        mainPage.openMenu();
-        menu.forexPage();
+        mainPage.openMenu().forexPage();
         if (tradeNow.getFormSignUp1().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
@@ -135,8 +130,7 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
     @Test
     @DisplayName("Открытие формы после нажатия на кнопку 'Buy' виджета 'Live Forex prices' заголовка 'Markets' раздела 'Forex'")
     public void checkButtonBuyOnTheWidgetLiveForexForMenuMarketsForexTest(){
-        mainPage.openMenu();
-        menu.forexPage();
+        mainPage.openMenu().forexPage();
         if (tradeNow.getFormSignUp1().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
@@ -165,24 +159,21 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
     @Test
     @DisplayName("Открытие правильной страницы торгуемых пар виджета 'Live Forex prices' заголовка 'Markets' раздела 'Forex'")
     public void checkOpenPageNamePareOnTheWidgetLiveForexForMenuMarketsForexTest(){
-        mainPage.openMenu();
-        menu.forexPage();
+        mainPage.openMenu().forexPage();
+        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
+        String urlTradingParePage = buttonNamePare.getAttribute("href");
         if (tradeNow.getFormSignUp1().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
         if (tradeNow.getFormSignUp2().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
-        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
-        String urlTradingParePage = buttonNamePare.getAttribute("href");
-
         if (buttonNamePare.isDisplayed()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
                 mainPage.getButtonCookieRejectAll().click();
             }
             buttonNamePare.click();
             tradingParePage.getNameTradingPare().shouldHave(text(buttonNamePare.getText()));
-
             webdriver().shouldHave(urlContaining(urlTradingParePage), Duration.ofSeconds(5));
 
         } else {
@@ -199,15 +190,14 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
     @Test
     @DisplayName("Открытие формы регистрации или авторизации кнопоки 'Add to favourite' торгуемых пар в разделе 'Forex'")
     public void checkButtonAddToFavouriteForSingUpFormMenuMarketsForexTradingPareTest(){
-        mainPage.openMenu();
-        menu.forexPage();
+        mainPage.openMenu().forexPage();
+        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (tradeNow.getFormSignUp1().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
         if (tradeNow.getFormSignUp2().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
-        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (buttonNamePare.isDisplayed()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
                 mainPage.getButtonCookieRejectAll().click();
@@ -257,8 +247,7 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
     @Test
     @DisplayName("Открытие формы регистрации или авторизации кнопоки 'Bell' торгуемых пар в разделе 'Forex'")
     public void checkButtonBellForSingUpFormMenuMarketsForexTradingPareTest(){
-        mainPage.openMenu();
-        menu.forexPage();
+        mainPage.openMenu().forexPage();
         if (tradeNow.getFormSignUp1().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
@@ -314,15 +303,14 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
     @Test
     @DisplayName("Открытие формы регистрации или авторизации кнопоки 'View detailed chart' торгуемых пар в разделе 'Forex'")
     public void checkButtonViewDetailedChartForSingUpFormMenuMarketsForexTradingPareTest(){
-        mainPage.openMenu();
-        menu.forexPage();
+        mainPage.openMenu().forexPage();
+        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (tradeNow.getFormSignUp1().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
         if (tradeNow.getFormSignUp2().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
-        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (buttonNamePare.isDisplayed()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
                 mainPage.getButtonCookieRejectAll().click();
@@ -372,15 +360,14 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
     @Test
     @DisplayName("Открытие формы регистрации или авторизации кнопоки 'Sell' торгуемых пар в разделе 'Forex'")
     public void checkButtonSellForSingUpFormMenuMarketsForexTradingPareTest(){
-        mainPage.openMenu();
-        menu.forexPage();
+        mainPage.openMenu().forexPage();
+        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (tradeNow.getFormSignUp1().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
         if (tradeNow.getFormSignUp2().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
-        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (buttonNamePare.isDisplayed()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
                 mainPage.getButtonCookieRejectAll().click();
@@ -430,15 +417,14 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
     @Test
     @DisplayName("Открытие формы регистрации или авторизации кнопоки 'Buy' торгуемых пар в разделе 'Forex'")
     public void checkButtonBuyForSingUpFormMenuMarketsForexTradingPareTest(){
-        mainPage.openMenu();
-        menu.forexPage();
+        mainPage.openMenu().forexPage();
+        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (tradeNow.getFormSignUp1().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
         if (tradeNow.getFormSignUp2().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
-        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (buttonNamePare.isDisplayed()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
                 mainPage.getButtonCookieRejectAll().click();
@@ -488,15 +474,14 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
     @Test
     @DisplayName("Открытие формы регистрации или авторизации кнопоки 'Try now' торгуемых пар в разделе 'Forex'")
     public void checkButtonTryNowForSingUpFormMenuMarketsForexTradingPareTest(){
-        mainPage.openMenu();
-        menu.forexPage();
+        mainPage.openMenu().forexPage();
+        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (tradeNow.getFormSignUp1().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
         if (tradeNow.getFormSignUp2().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
-        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (buttonNamePare.isDisplayed()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
                 mainPage.getButtonCookieRejectAll().click();
@@ -546,15 +531,14 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
     @DisplayName("Открытие формы регистрации или авторизации кнопоки 'Start trading'" +
             " торгуемых пар в разделе 'Forex'")
     public void checkButtonStartTradingForSingUpFormMenuMarketsForexTradingPareTest(){
-        mainPage.openMenu();
-        menu.forexPage();
+        mainPage.openMenu().forexPage();
+        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (tradeNow.getFormSignUp1().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
         if (tradeNow.getFormSignUp2().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
-        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (buttonNamePare.isDisplayed()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
                 mainPage.getButtonCookieRejectAll().click();
@@ -610,15 +594,14 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
     @DisplayName("Открытие формы регистрации или авторизации кнопоки 'Trade Now'" +
             " торгуемых пар в разделе 'Forex'")
     public void checkButtonTradeNowForSingUpFormMenuMarketsForexTradingPareTest(){
-        mainPage.openMenu();
-        menu.forexPage();
+        mainPage.openMenu().forexPage();
+        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (tradeNow.getFormSignUp1().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
         if (tradeNow.getFormSignUp2().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
-        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (buttonNamePare.isDisplayed()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
                 mainPage.getButtonCookieRejectAll().click();
@@ -671,15 +654,14 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
     @DisplayName("Открытие формы регистрации или авторизации кнопоки 'Create & verify your account'" +
             " торгуемых пар в разделе 'Forex'")
     public void checkButtonCreateForSingUpFormMenuMarketsForexTradingPareTest(){
-        mainPage.openMenu();
-        menu.forexPage();
+        mainPage.openMenu().forexPage();
+        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (tradeNow.getFormSignUp1().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
         if (tradeNow.getFormSignUp2().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
-        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (buttonNamePare.isDisplayed()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
                 mainPage.getButtonCookieRejectAll().click();
@@ -693,7 +675,7 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
             }
             stillLookingFor.getBlockBlackStillLookingFor().scrollTo();
             stillLookingFor.getButtonCreateBlockStillLooking().click();
-            sleep(1000);
+            sleep(2000);
             if (tradeNow.getFormSignUp1().isDisplayed()) {
                 tradeNow.getCloseFormSignUp().click();
             } else if (tradeNow.getFormSignUp2().isDisplayed()) {
@@ -735,15 +717,14 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
     @DisplayName("Открытие платформы через 'Go to platform' в 'Long position overnight fee'" +
             " торгуемых пар в разделе 'Forex'")
     public void checkButtonGoToPlatformLongFormMenuMarketsForexTradingPareTest(){
-        mainPage.openMenu();
-        menu.forexPage();
+        mainPage.openMenu().forexPage();
+        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (tradeNow.getFormSignUp1().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
         if (tradeNow.getFormSignUp2().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
-        SelenideElement buttonNamePare = choseRandomButton(forexPage.getListButtonNamePare());
         if (buttonNamePare.isDisplayed()){
             if (mainPage.getButtonCookieRejectAll().isDisplayed()){
                 mainPage.getButtonCookieRejectAll().click();
@@ -779,8 +760,7 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
     @DisplayName("Открытие платформы через 'Go to platform' в 'Short position overnight fee'" +
             " торгуемых пар в разделе 'Forex'")
     public void checkButtonGoToPlatformShortFormMenuMarketsForexTradingPareTest(){
-        mainPage.openMenu();
-        menu.forexPage();
+        mainPage.openMenu().forexPage();
         if (tradeNow.getFormSignUp1().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }

@@ -41,5 +41,11 @@ public class LangPage {
     public void choseLanguage(SelenideElement language){
         language.click();
     }
+    public MainPage choseLanguageOnMainPage(SelenideElement language){
+        language.click();
+        return new MainPage();
+    }
+
+
 
 }

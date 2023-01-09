@@ -13,31 +13,37 @@ public class CapitalMenuMarketsTest extends BaseTest {
     @Test
     @DisplayName("Widget 'Trading instrument' в выпадающем меню раздела 'Markets'")
     public void checkMenuMarketsWidgetTest(){
-        mainPage.openMenu();
         int i = new Random().nextInt(menu.getButtonsTradeMenuMarketsMainPage().size());
-        menu.getButtonsTradeMenuMarketsMainPage().get(i).click();
+        mainPage
+                .openMenu()
+                .getButtonsTradeMenuMarketsMainPage()
+                .get(i)
+                .click();
         webdriver().shouldHave(urlContaining("https://capital.com/trading/platform/charting/"), Duration.ofSeconds(5));
     }
 
     @Test
     @DisplayName("Кнопка Sell на Widget 'Trading instrument' заголовка 'Markets'")
     public void checkButtonSellTradingInstrumentOnTheWidgetInTitleMarketsTest(){
-        mainPage.openMenu();
-        menu.marketsPage().checkButtonSell();
+        mainPage
+                .openMenu()
+                .marketsPage()
+                .checkButtonSell();
     }
 
     @Test
     @DisplayName("Кнопка Buy на Widget 'Trading instrument' заголовка 'Markets'")
     public void checkButtonBuyTradingInstrumentOnTheWidgetInTitleMarketsTest(){
-        mainPage.openMenu();
-        menu.marketsPage().checkButtonBuy();
+        mainPage
+                .openMenu()
+                .marketsPage()
+                .checkButtonBuy();
     }
 
     @Test
     @DisplayName("Кнопка 'Create account' раздела 'Still looking for a broker you can trust?' заголовка 'Markets'")
     public void checkButtonCreateAccountOnTheBlockStillLookingForTest(){
-        mainPage.openMenu();
-        menu.getTitleMarkets().click();
+        mainPage.openMenu().marketsPage();
         stillLookingFor.getBlockBlackStillLookingFor().scrollTo();
         if (tradeNow.getFormSignUp1().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
