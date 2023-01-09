@@ -311,7 +311,7 @@ public class CapitalMainPageTest extends BaseTest{
     public void checkButtonInBlockWhyChoose(){
         mainPage.getBlockWhyChoose().scrollTo();
         mainPage.getButtonTryNowBlockWhyChoose().click();
-        sleep(1000);
+        sleep(2000);
         if (tradeNow.getFormSignUp1().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         } else if (tradeNow.getFormSignUp2().isDisplayed()) {

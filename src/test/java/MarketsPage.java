@@ -23,7 +23,7 @@ public class MarketsPage {
                 tradeNow.getCloseFormSignUp().click();
             }
             el.click();
-            sleep(1000);
+            sleep(2000);
             if (tradeNow.getFormSignUp1().isDisplayed()) {
                 tradeNow.getCloseFormSignUp().click();
             } else if (tradeNow.getFormSignUp2().isDisplayed()) {
@@ -47,7 +47,7 @@ public class MarketsPage {
                 tradeNow.getCloseFormSignUp().click();
             }
             el.click();
-            sleep(1000);
+            sleep(2000);
             if (tradeNow.getFormSignUp1().isDisplayed()) {
                 tradeNow.getCloseFormSignUp().click();
             } else if (tradeNow.getFormSignUp2().isDisplayed()) {

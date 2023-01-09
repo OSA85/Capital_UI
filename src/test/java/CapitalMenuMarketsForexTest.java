@@ -567,6 +567,9 @@ public class CapitalMenuMarketsForexTest extends BaseTest {
                 tradeNow.getCloseFormSignUp().click();
             }
             mainPage.getBlockTradingСalculator().scrollTo();
+            if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+                mainPage.getButtonCookieRejectAll().click();
+            }
             mainPage.getButtonStartBlockTradingСalculator().click();
             sleep(1000);
             if (tradeNow.getFormSignUp1().isDisplayed()) {
