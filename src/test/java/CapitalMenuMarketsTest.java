@@ -19,7 +19,7 @@ public class CapitalMenuMarketsTest extends BaseTest {
                 .getButtonsTradeMenuMarketsMainPage()
                 .get(i)
                 .click();
-        webdriver().shouldHave(urlContaining("https://capital.com/trading/platform/charting/"), Duration.ofSeconds(5));
+        webdriver().shouldHave(urlContaining("https://capital.com/trading/platform/charting"), Duration.ofSeconds(5));
     }
 
     @Test

@@ -213,9 +213,23 @@ public class CapitalMainPageTest extends BaseTest{
             logIn.getButtonCloseFormLogin().click();
         }
     }
+
     @Test
-    @DisplayName("Открытие формы блока 'Explore our platform'")
-    public void checkButtonInBlockExploreOurPlatform(){
+    @DisplayName("Открытие формы через ссылку 'easy-to-use' блока 'Explore our platform'")
+    public void checkButtonEasyToUseInBlockExploreOurPlatform(){
+        mainPage.getBlockExploreOurPlatform().scrollTo();
+        if (tradeNow.getFormSignUp1().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        if (tradeNow.getFormSignUp2().isDisplayed()) {
+            tradeNow.getCloseFormSignUp().click();
+        }
+        mainPage.getButtonEasyToUseBlockExploreOurPlatform().click();
+        webdriver().shouldHave(urlContaining("https://capital.com/trading/platform"), Duration.ofSeconds(5));
+    }
+    @Test
+    @DisplayName("Открытие формы через кнопку 'Try now' блока 'Explore our platform'")
+    public void checkButtonTryNowInBlockExploreOurPlatform(){
         mainPage.getBlockExploreOurPlatform().scrollTo();
         if (tradeNow.getFormSignUp1().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();

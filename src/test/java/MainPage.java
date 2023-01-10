@@ -29,6 +29,7 @@ public class MainPage {
     private final SelenideElement buttonTradeNowBlockMarketAnalysis = $x("//div [@class='cc-sliderFade__item active']//div[text()='Trade Now']");
     private final SelenideElement blockExploreOurPlatform = $x("//section [@class='brick cc-boxLg grey']");
     private final SelenideElement buttonTryNowBlockExploreOurPlatform = $x("//div [@class='alignCenterToLeft js-analyticsVisible']//a [text()='Try now']");
+    private final SelenideElement buttonEasyToUseBlockExploreOurPlatform = $x("//div [@class='c-lg-7 c-md-6']//a [@href='/trading/platform']");
     private final SelenideElement blockTradeCFD = $x("//div [@data-type='tradingview']");
     private final SelenideElement buttonExploreBlockTradeCFD = $x("//div [@data-type='tradingview']//a[@data-type='tradingview']");
     private final SelenideElement blockNewToTrading = $x("//section[@class='cc-boxXl newToTrading grey']");
