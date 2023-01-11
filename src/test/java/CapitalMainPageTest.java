@@ -186,6 +186,9 @@ public class CapitalMainPageTest extends BaseTest{
     @DisplayName("Открытие формы блока 'Still looking for a broker you can trust?'")
     public void checkButtonInBlockStillLooking(){
         mainPage.getBlockWhiteStillLooking().scrollTo();
+        if (mainPage.getButtonCookieRejectAll().isDisplayed()){
+            mainPage.getButtonCookieRejectAll().click();
+        }
         stillLookingFor.getButtonCreateBlockStillLooking().click();
         sleep(1000);
         if (tradeNow.getFormSignUp1().isDisplayed()) {
