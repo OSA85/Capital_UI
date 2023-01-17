@@ -707,10 +707,10 @@ public class CapitalMenuMarketsCryptocurrenciesTest extends BaseTest{
 
     @Test
     @DisplayName("Открытие платформы через 'Go to platform' в 'Long position overnight fee'" +
-            " торгуемых пар в разделе 'Indices'")
-    public void checkButtonGoToPlatformLongFormMenuMarketsIndicesTradingPareTest(){
-        mainPage.openMenu().indicesPage();
-        SelenideElement buttonNamePare = choseRandomButton(indicesPage.getListButtonNamePare());
+            " торгуемых пар в разделе 'Cryptocurrencies'")
+    public void checkButtonGoToPlatformLongFormMenuMarketsCryptocurrenciesTradingPareTest(){
+        mainPage.openMenu().cryptocurrenciesPage();
+        SelenideElement buttonNamePare = choseRandomButton(cryptocurrenciesPage.getListButtonNamePare());
         if (tradeNow.getFormSignUp1().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
@@ -750,10 +750,10 @@ public class CapitalMenuMarketsCryptocurrenciesTest extends BaseTest{
 
     @Test
     @DisplayName("Открытие платформы через 'Go to platform' в 'Short position overnight fee'" +
-            " торгуемых пар в разделе 'Indices'")
-    public void checkButtonGoToPlatformShortFormMenuMarketsIndicesTradingPareTest(){
-        mainPage.openMenu().indicesPage();
-        SelenideElement buttonNamePare = choseRandomButton(indicesPage.getListButtonNamePare());
+            " торгуемых пар в разделе 'Cryptocurrencies'")
+    public void checkButtonGoToPlatformShortFormMenuMarketsCryptocurrenciesTradingPareTest(){
+        mainPage.openMenu().cryptocurrenciesPage();
+        SelenideElement buttonNamePare = choseRandomButton(cryptocurrenciesPage.getListButtonNamePare());
         if (tradeNow.getFormSignUp1().isDisplayed()) {
             tradeNow.getCloseFormSignUp().click();
         }
