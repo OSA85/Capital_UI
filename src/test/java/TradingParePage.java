@@ -16,4 +16,5 @@ public class TradingParePage {
     private final SelenideElement longPositionOvernightFeeGoToPlatform = $x("//div [@class='toolInfo']//a");
     private final SelenideElement shortPositionOvernightFeeGoToPlatform = $x("//div [@class='toolInfo']//a");
 
+
 }

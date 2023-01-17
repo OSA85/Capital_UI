@@ -26,7 +26,7 @@ public class MainPage {
 
     private final SelenideElement blockWhiteStillLooking = $x("//section [@class='regSteps cc-boxLg mainConstuctor__item mainConstuctor__item--fullwidth grey']");
     private final SelenideElement blockMarketAnalysis = $x("//div [@class='flex flex-wrap']//h3 [text()='Market analysis']");
-    private final SelenideElement buttonTradeNowBlockMarketAnalysis = $x("//div [@class='cc-sliderFade__item active']//div[text()='Trade Now']");
+    private final SelenideElement buttonTradeNowBlockMarketAnalysis = $x("//div[@class='cc-sliderFade__item active']//div[@class='promoMarket__inner']//a");
     private final SelenideElement blockExploreOurPlatform = $x("//section [@class='brick cc-boxLg grey']");
     private final SelenideElement buttonTryNowBlockExploreOurPlatform = $x("//div [@class='alignCenterToLeft js-analyticsVisible']//a [text()='Try now']");
     private final SelenideElement buttonEasyToUseBlockExploreOurPlatform = $x("//div [@class='c-lg-7 c-md-6']//a [@href='/trading/platform']");
@@ -35,7 +35,7 @@ public class MainPage {
     private final SelenideElement blockNewToTrading = $x("//section[@class='cc-boxXl newToTrading grey']");
     private final SelenideElement buttonPractiseBlockNewToTrading = $x("//section[@class='cc-boxXl newToTrading grey']//a [@data-type='btn_new_to_trading']");
     private final SelenideElement blockTradingСalculator = $x("//div[@id='calcWrap']");
-    private final SelenideElement buttonStartBlockTradingСalculator = $x("//div[@id='calcWrap']//div [@data-type='btn_calculator']");
+    private final SelenideElement buttonStartBlockTradingСalculator = $x("//div[@id='calcWrap']//a [@data-type='btn_calculator']");
     private final ElementsCollection buttonTradeBlockTraderDashboard = $$x("//div[@class='c-lg-6']//button");
     private final SelenideElement blockWhyChoose = $x("//div[@class='cc-boxXl cc-counter js-counter dark']");
     private final SelenideElement buttonTryNowBlockWhyChoose = $x("//div[@class='cc-boxXl cc-counter js-counter dark']//a");

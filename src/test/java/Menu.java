@@ -13,6 +13,7 @@ public class Menu {
     private final SelenideElement titleMarkets = $x("//div [@data-nav='Markets']//a [@href='https://capital.com/derivative-financial-instruments']");
     private final SelenideElement titleForex = $x("//div [@class='cc-nav__col gapSm']//a[@data-type='Forex']");
     private final SelenideElement titleIndices = $x("//div [@class='cc-nav__col gapSm']//a[@data-type='Indices']");
+    private final SelenideElement titleCryptocurrencies = $x("//div [@class='cc-nav__col gapSm']//a[@data-type='Crypto']");
 
 
     public MarketsPage marketsPage(){
@@ -26,5 +27,10 @@ public class Menu {
     public IndicesPage indicesPage(){
         titleIndices.click();
         return new IndicesPage();
+    }
+
+    public CryptocurrenciesPage cryptocurrenciesPage(){
+        titleCryptocurrencies.click();
+        return new CryptocurrenciesPage();
     }
 }
