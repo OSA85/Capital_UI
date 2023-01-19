@@ -36,8 +36,12 @@ public class CapitalMainPageTest extends BaseTest{
         menuLicense.choseLicense(menuLicense.getLicenseFSA());
         webdriver().shouldHave(url("https://capital.com/?license=SEY"));
         mainPage.getFooterDescription().shouldHave(text("FSA"),Duration.ofSeconds(2));
+        menuLicense.choseLicense(menuLicense.getLicenseSCB());
+        webdriver().shouldHave(url("https://capital.com/?license=BAH"));
+        mainPage.getFooterDescription().shouldHave(text("license number SIA-F245"),Duration.ofSeconds(2));
         menuLicense.choseLicense(menuLicense.getOurGlobalOffices());
         webdriver().shouldHave(url("https://capital.com/international-offices"));
+
     }
 
     @Test
@@ -85,16 +89,8 @@ public class CapitalMainPageTest extends BaseTest{
     @DisplayName("Проверка открытия нужных форм при кликах по кнопкам на  главных баннерах главной страницы")
     public void checkBanner(){
         //GetInvolved баннер
-        mainBanner.getBannerGetInvolved().click();
-        mainBanner.getButtonTradeNowOnTheGetInvolvedBanner().click();
-        if (tradeNow.getFormSignUp1().isDisplayed()){
-            tradeNow.getCloseFormSignUp().click();
-        } else {
-            tradeNow.getFormSignUp2().isDisplayed();
-            tradeNow.getCloseFormSignUp().click();
-        }
-        mainBanner.getBannerGetInvolved().click();
-        mainBanner.getButtonPractiseForFreeOnTheGetInvolvedBanner().click();
+        mainBanner.getBannerEarningsSeason().click();
+        mainBanner.getButtonStartTradingOnTheEarningsSeasonBanner().click();
         if (tradeNow.getFormSignUp1().isDisplayed()){
             tradeNow.getCloseFormSignUp().click();
         } else {

@@ -18,6 +18,7 @@ public class MenuLicense {
     private final SelenideElement licenseNBRB = $x("//a[@href='https://capital.com/?license=NBRB']");
     private final SelenideElement licenseLLC = $x("//a[@href='https://capital.com/?license=CCSTV']");
     private final SelenideElement licenseFSA = $x("//a[@href='https://capital.com/?license=SEY']");
+    private final SelenideElement licenseSCB = $x("//a[@href='https://capital.com/?license=BAH']");
     private final SelenideElement ourGlobalOffices = $x("//a[@href='https://capital.com/international-offices']");
 
     public void choseLicense (SelenideElement license){
